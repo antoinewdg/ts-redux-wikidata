@@ -1,0 +1,13 @@
+version: '3'
+services:
+  frontend:
+    build: ./
+    volumes:
+      - ./app:/opt/webapp/app
+      - ./package.json:/opt/webapp/package.json
+      - ./yarn.lock:/opt/webapp/yarn.lock
+    command: yarn start
+    ports: 
+      - 8080:8080
+
+
